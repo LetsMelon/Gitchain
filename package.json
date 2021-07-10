@@ -1,0 +1,9 @@
+{
+  "name": "gitchain",
+  "version": "1.0.0",
+  "description": "Change between multiple Git users easily (may change later)",
+  "main": "./src/index.js",
+  "repository": "git@github.com:LetsMelon/Gitchain.git",
+  "author": "Domenic Melcher <domi.m@outlook.com>",
+  "license": "MIT"
+}
