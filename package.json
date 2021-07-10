@@ -5,5 +5,8 @@
   "main": "./src/index.js",
   "repository": "git@github.com:LetsMelon/Gitchain.git",
   "author": "Domenic Melcher <domi.m@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "simple-git": "^2.40.0"
+  }
 }
