@@ -12,8 +12,10 @@ const changeProfile = async (newProfile) => {
   }
 }
 
-(async () => {
+const main = async () => {
   await changeProfile(config.profiles[0]);
   const gitConfig = await git.listConfig();
   console.log(gitConfig);
-})();
+};
+
+module.exports = main;
