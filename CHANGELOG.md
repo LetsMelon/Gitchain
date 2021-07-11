@@ -17,4 +17,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 [develop]: https://github.com/LetsMelon/Gitchain/compare/main...develop
 
-[1.0.0]: https://github.com/LetsMelon/Gitchain/compare/0c03b478c1fb3f5f2dbc4e739714dfc80fbd5962...main
+[1.0.0]: https://github.com/LetsMelon/Gitchain/compare/0c03b478c1fb3f5f2dbc4e739714dfc80fbd5962...1.0.0
