@@ -1,0 +1,10 @@
+.github/
+coverage/
+.eslintrc.js
+.gitignore
+.prettierrc
+config.example.json
+jest.config.js
+jsconfig.json
+.log
+*.tgz
