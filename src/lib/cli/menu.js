@@ -20,9 +20,9 @@ module.exports = () => {
           if (choices[i] === val) return i;
         }
         return -1;
-      }
-    }
-  ]
+      },
+    },
+  ];
 
   return inquirer.prompt(questions);
 };
