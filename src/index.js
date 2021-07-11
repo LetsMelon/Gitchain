@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 const path = require('path');
 
 const { git, config, cli } = require('./lib');
@@ -21,6 +22,7 @@ const main = async () => {
 
   const gitchainConfig = config.check(config.file.load(absolutePath, true));
 
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     const { MENU } = await cli.menu();
     if (MENU === 0) {
