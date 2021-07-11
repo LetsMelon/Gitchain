@@ -1,6 +1,4 @@
-const config = require('../config.json');
-
-const { git } = require('./lib');
+const { git, config, cli } = require('./lib');
 
 const changeProfile = async (newProfile) => {
   console.log(`Change to profile '${newProfile.name}'`);
@@ -11,9 +9,17 @@ const changeProfile = async (newProfile) => {
 };
 
 const main = async () => {
-  await changeProfile(config.profiles[0]);
-  const gitConfig = await git.config.getConfig.all();
-  console.log(gitConfig);
+  const configPath = '../config.json';
+  const gitchainConfig = config.check(require(configPath));
+  
+  while(true) {
+    const { MENU } = await cli.menu();
+    if (MENU === 0) {
+      // TODO
+    } else {
+      process.exit(0);
+    }
+  }
 };
 
 module.exports = main;
