@@ -1,11 +1,14 @@
 const { git, config, cli } = require('./lib');
 
 const changeProfile = async (newProfile) => {
-  console.log(`Change to profile '${newProfile.name}'`);
-  for (const tag of newProfile.tags) {
-    const { key, value } = tag;
-    await git.config.addConfig(key, value);
-  }
+  console.log(`Changed to profile '${newProfile.name}'`);
+  await Promise.all(
+    newProfile.tags.map((item) => git.config.addConfig(item.key, item.value)),
+  );
+};
+
+const exitProgram = () => {
+  process.exit(0);
 };
 
 const main = async () => {
@@ -15,9 +18,11 @@ const main = async () => {
   while (true) {
     const { MENU } = await cli.menu();
     if (MENU === 0) {
-      // TODO
+      const { P_MENU } = await cli.profile.menu(gitchainConfig.profiles);
+      await changeProfile(gitchainConfig.profiles[P_MENU]);
+      exitProgram();
     } else {
-      process.exit(0);
+      exitProgram();
     }
   }
 };
