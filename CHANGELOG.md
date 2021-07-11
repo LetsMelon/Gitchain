@@ -10,9 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - added basic profile switching
-- added github ci
+- added GitHub CI
 - added basic tests
-- added `chalk`, `inquirer`, `simple-git` and `yup` as dependecies
+- added `chalk`, `inquirer`, `simple-git` and `yup` as dependencies
 - added `eslint`, `jest`, `prettier`, `bdd-stdin` as devDependencies
 
 [develop]: https://github.com/LetsMelon/Gitchain/compare/main...develop
