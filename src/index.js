@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { git, config, cli } = require('./lib');
 
 const changeProfile = async (newProfile) => {
@@ -13,7 +15,11 @@ const exitProgram = () => {
 
 const main = async () => {
   const configPath = '../config.json';
-  const gitchainConfig = config.check(require(configPath));
+  const absolutePath = path.normalize(`${__dirname}/${configPath}`);
+
+  console.log(`Load config file from: ${absolutePath}`);
+
+  const gitchainConfig = config.check(config.file.load(absolutePath, true));
 
   while (true) {
     const { MENU } = await cli.menu();

@@ -1,3 +1,4 @@
 const check = require('./check');
+const file = require('./file');
 
-module.exports = { check };
+module.exports = { check, file };
