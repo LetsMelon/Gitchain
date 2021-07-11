@@ -1,0 +1,30 @@
+{
+  "profiles": [
+    {
+      "name": "private",
+      "tags": [
+        {
+          "key": "user.name",
+          "value": "Domenic Melcher"
+        }, 
+        {
+          "key": "user.email",
+          "value": "domi.m@outlook.com"
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "tags": [
+        {
+          "key": "user.name",
+          "value": "Domenic Melcher (Test)"
+        }, 
+        {
+          "key": "user.email",
+          "value": "domenic.melcher@test.com"
+        }
+      ]
+    }
+  ]
+}
