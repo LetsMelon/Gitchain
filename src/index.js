@@ -11,8 +11,8 @@ const changeProfile = async (newProfile) => {
 const main = async () => {
   const configPath = '../config.json';
   const gitchainConfig = config.check(require(configPath));
-  
-  while(true) {
+
+  while (true) {
     const { MENU } = await cli.menu();
     if (MENU === 0) {
       // TODO
