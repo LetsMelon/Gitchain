@@ -16,5 +16,5 @@ module.exports = (path, create) => {
     if (!path.endsWith(item))
       throw new Error(`'${path}': is not a ${item} file`);
   });
-  return require(path);
+  return JSON.parse(fs.readFileSync(path));
 };
